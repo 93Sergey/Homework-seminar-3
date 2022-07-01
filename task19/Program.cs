@@ -9,9 +9,10 @@
 int[] array = new int[5];
 for (int i = 0; i < array.Length; i++)
 {
-    array[i] = Convert.ToInt32(Console.ReadLine());
+    array[i] = new Random().Next(1, 10);
 }
-if (array[0] == array[4] || array[1] == array[3])
+
+if (array[0] == array[4] && array[1] == array[3])
 {
     Console.WriteLine(string.Join("", array) + "-> да");
 }
